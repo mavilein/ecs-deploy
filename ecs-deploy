@@ -277,9 +277,10 @@ function createNewTaskDefJson() {
     NEW_DEF=$(echo $DEF | jq "{${NEW_DEF_JQ_FILTER}}")
 
     # If in test mode output $NEW_DEF
-    if [ "$BASH_SOURCE" != "$0" ]; then
-      echo $NEW_DEF
-    fi
+    # if [ "$BASH_SOURCE" != "$0" ]; then
+    echo MBTEST
+    echo $NEW_DEF
+    # fi
 }
 
 function registerNewTaskDefinition() {
